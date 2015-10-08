@@ -1,6 +1,7 @@
 var express = require('express'),
     io = require('socket.io'),
     http = require('http'),
+    mongoose = require('mongoose');
     app = express(),
     server = http.createServer(app),
     io = io.listen(server),
@@ -8,21 +9,15 @@ var express = require('express'),
     favicon = require('static-favicon'),
     logger = require('morgan'),
     cookieParser = require('cookie-parser'),
-    bodyParser = require('body-parser');
+    bodyParser = require('body-parser'),
+   // db = require('./scripts/models/db'),
+    Usermodel = require('./scripts/models/user');
 
  
- // set up our JSON API for later
-require('./routes/api')(app);
+mongoose.connect('mongodb://localhost/usersdb');
 
-// set up our socket server
-require('./sockets/base')(io);
 
-server.listen(3000);
-
-// optional - set socket.io logging level
-io.set('log level', 1000);
-
-// view engine setup (for later)
+ // view engine setup (for later)
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
@@ -33,6 +28,24 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
+
+ // set up our JSON API for later
+require('./routes/api')(app);
+
+// set up our socket server
+require('./sockets/base')(io);
+
+
+
+server.listen(3000);
+
+// optional - set socket.io logging level
+io.set('log level', 1000);
+
+
+
+
+ 
 
 // for dev
 //app.use(express.static(__dirname +  '/angular-frontend/app/'));

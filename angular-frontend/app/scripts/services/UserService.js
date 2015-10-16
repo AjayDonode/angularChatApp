@@ -1,19 +1,22 @@
 'use strict';
-appServices.factory('AuthenticationService', function() {
+var chatApp = angular.module('chatApp');
+
+angular.module('chatApp')
+    .service('AuthenticationService', function() {
     var auth = {
         isLogged: false
     }
  
     return auth;
 });
-appServices.factory('UserService', function($http) {
-    return {
-        logIn: function(username, password) {
+chatApp.service('UserService', function($http) {
+    
+       /*$scope.logIn =  function(username, password) {
             return $http.post(options.api.base_url + '/login', {username: username, password: password});
-        },
- 
-        logOut: function() {
- 
         }
-    }
+ 
+        $scope.logOut= function($http) {
+ 
+        }*/
+    
 });

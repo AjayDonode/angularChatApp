@@ -1,23 +1,22 @@
 'use strict';
+var chatApp = angular.module('chatApp');
 
-angular.module('chatApp')
-    .controller('AdminUserCtrl', ['$scope', '$location', '$window'
-    function AdminUserCtrl($scope, $location, $window) {
+chatApp.controller('AdminUserCtrl', function($scope, $location, $window,UserService) {
  
         //Admin User Controller (login, logout)
         $scope.logIn = function logIn(username, password) {
             console.log("Data Entered is User: "+username +" Pass: "+password);
-           /* if (username !== undefined && password !== undefined) {
+            if (username !== undefined && password !== undefined) {
  
                 UserService.logIn(username, password).success(function(data) {
-                    AuthenticationService.isLogged = true;
-                    $window.sessionStorage.token = data.token;
+                    // AuthenticationService.isLogged = true;
+                    // $window.sessionStorage.token = data.token;
                     $location.path("/admin");
                 }).error(function(status, data) {
                     console.log(status);
                     console.log(data);
                 });
-            }*/
+            }
         }
  
         $scope.logout = function logout() {
@@ -28,4 +27,4 @@ angular.module('chatApp')
             }*/
         }
     }
-]);
+);

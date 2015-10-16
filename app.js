@@ -12,12 +12,10 @@ var express = require('express'),
     bodyParser = require('body-parser'),
    // db = require('./scripts/models/db'),
     Usermodel = require('./scripts/models/user');
-
  
 mongoose.connect('mongodb://localhost/usersdb');
 
-
- // view engine setup (for later)
+// view engine setup (for later)
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
@@ -35,29 +33,14 @@ require('./routes/api')(app);
 // set up our socket server
 require('./sockets/base')(io);
 
-
-
 server.listen(3000);
 
 // optional - set socket.io logging level
 io.set('log level', 1000);
-
-
-
-
- 
-
-// for dev
-//app.use(express.static(__dirname +  '/angular-frontend/app/'));
-
-// for production, do 'grunt --force' and then comment the line above
-// and uncomment the line below
-
 app.use(express.static(__dirname +  '/public'));
 
 /// catch 404 and forwarding to error handler
-app.use(function (req, res, next) {
-  
+app.use(function (req, res, next) {  
   var err = new Error('Not Found');
   err.status = 404;
   next(err);

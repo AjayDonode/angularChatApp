@@ -13,9 +13,7 @@ angular
   .config(function($stateProvider, $urlRouterProvider) {
     
     $stateProvider
-    
-        // route to show our basic form (/form)
-        .state('chat', {
+         .state('chat', {
             url: '/chat',
             templateUrl: 'views/ChatMain.html',
             controller: 'SocketCtrl'
@@ -23,10 +21,15 @@ angular
         .state('login', {
             url: '/login',
             templateUrl: 'views/login.html',
-            controller: 'AdminUserCtrl'
+            controller: 'UserCtrl'
+        })
+        .state('register', {
+            url: '/register',
+            templateUrl: 'views/UserLogin/Register.html',
+            controller: 'RegisterCtrl'
         })
  		
  		$urlRouterProvider.otherwise('/login');
     
     })
-  .value('nickName', 'anonymous');
+  .value('nickName', 'anonymous'); //the way to use global variables (constants)

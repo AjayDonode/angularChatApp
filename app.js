@@ -11,7 +11,8 @@ var express = require('express'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
    // db = require('./scripts/models/db'),
-    Usermodel = require('./scripts/models/user');
+   AuthUser = require('./scripts/models/user').AuthUser,
+    Usermodel = require('./scripts/models/user').User;
  
 mongoose.connect('mongodb://localhost/usersdb');
 

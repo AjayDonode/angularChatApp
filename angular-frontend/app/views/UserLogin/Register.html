@@ -1,0 +1,91 @@
+<div ng-controller="RegisterCtrl">
+    <!-- form class="form-horizontal" role="form">
+        <label>Name</label>
+        <input type="text" name="name" ng-model="newcontact.name" /> <br/>
+        <label>Email</label>
+        <input type="text" name="email" ng-model="newcontact.email" /> <br/>
+        <label>Phone</label>
+        <input type="text" name="phone" ng-model="newcontact.phone" /> 
+        <br/>
+        <input type="hidden" ng-model="newcontact.id" />
+        <input type="button" value="Save" ng-click="saveContact()" class="btn btn-primary" />
+    </form -->
+    <br>
+    <h2>Register</h2>
+    <hr/>
+<form class="form-horizontal" role="form">
+<div class="form-group">
+            <label for="inputUsername" class="col-sm-4 control-label">Username</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="inputUsername" placeholder="Username" ng-model="newcontact.name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputUsername" class="col-sm-4 control-label">Email</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="inputEmail" placeholder="Email" ng-model="newcontact.email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="col-sm-4 control-label">Password</label>
+            <div class="col-sm-4">
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password" ng-model="newcontact.password">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="col-sm-4 control-label">Phone</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="inputPhone" placeholder="Phone" ng-model="newcontact.phone">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="col-sm-4 control-label">Profession</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="inputProfession" placeholder="Profession" ng-model="newcontact.profession">
+            </div>
+        </div>
+         <div class="form-group">
+            <label for="inputPassword" class="col-sm-4 control-label">Age</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="inputAge" placeholder="Age" ng-model="newcontact.age">
+            </div>
+        </div>
+
+        <input type="hidden" ng-model="newcontact.id" />
+        
+        <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-10">
+                <button type="submit" class="btn btn-default" ng-click="saveContact()">Save</button>
+            </div>
+        </div>
+
+    </form>
+
+    <br>
+    <span>TODO:  This is Temperory list, will use it in admin section</span>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Profession</th>
+                <th>Age</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="contact in contacts">
+                <td>{{ contact.name }}</td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.phone }}</td>
+                <td>{{ contact.profession }}</td>
+                <td>{{ contact.age }}</td>
+
+                <td> <a href="javascript:void(0)" ng-click="edit(contact.id)">edit</a> | <a href="javascript:void(0)" ng-click="delete(contact.id)">delete</a>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

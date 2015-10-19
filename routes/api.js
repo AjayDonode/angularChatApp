@@ -10,6 +10,52 @@ module.exports = function(app){
   		return res.send("<h4>Ping Ping ! <br>Its working </h4>");
 	});
 
+
+	app.post('/auth/authenticate', function(req, res) {
+		AuthUser.findOne({email: req.body.email, password: req.body.password}, function(err, authUser) {
+	        if (err) {
+	            res.json({
+	                type: false,
+	                data: "Error occured: " + err
+	            });
+	        } else {
+	            if (authUser) {
+	               res.json({
+	                    type: true,
+	                    data: authUser,
+	                    token: authUser.token
+	                }); 
+	            } else {
+	                res.json({
+	                    type: false,
+	                    data: "Incorrect email/password"
+	                });    
+	            }
+	        }
+	    });
+	});
+
+	app.put('/auth/register', function(req,res){
+		
+		var user = new AuthUser({
+						"email": req.body.email,
+						"username" : req.body.username,
+						"password" : req.body.password,
+						"phone" : req.body.phone,
+						"profession" : req.body.profession,
+						"age": req.body.age
+					});
+
+		user.save(function (err) {
+				if (!err) {
+				return console.log("created");
+				} else {
+				return console.log(err);
+				}
+			});
+		return res.send(user);
+		});
+
 	//get list of all users
 	app.get('/api/users', function(req,res){
 		return Usermodel.find(function (err, users) {

@@ -1,6 +1,7 @@
 var express = require('express'),
     io = require('socket.io'),
     http = require('http'),
+    
     mongoose = require('mongoose');
     app = express(),
     server = http.createServer(app),
@@ -10,9 +11,10 @@ var express = require('express'),
     logger = require('morgan'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
+    ObjectId = mongoose.Schema.ObjectId,
    // db = require('./scripts/models/db'),
-   AuthUser = require('./scripts/models/user').AuthUser,
-    Usermodel = require('./scripts/models/user').User;
+    AuthUser = require('./scripts/models/SchemaSet').AuthUser,
+    Usermodel = require('./scripts/models/SchemaSet').User;
  
 mongoose.connect('mongodb://localhost/usersdb');
 

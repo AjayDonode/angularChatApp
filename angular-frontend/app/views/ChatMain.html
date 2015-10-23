@@ -1,17 +1,15 @@
 <div class='container'>
   <div ng-controller='SocketCtrl'>
-    <h2>Angular Chatter</h2>
-    
-    <div class="row check-element animate-hide" ng-show="islogged" >
-    <br>
-    User Name : <input type="text" ng-model="username"> 
-    
-       <button class='btn btn- sm btn-primary'
-              ng-enable='form.$valid'
-              ng-click="createUser()">Add</button>
-    </div>
+    <h2>Chatter</h2>
+    <hr/>
     <div class="check-element animate-hide" ng-hide="islogged">
+      <div class='col-md-2 users-list' ng-init="loadUsers()">
+            <div ng-repeat="contact in contacts">
+                <a href="" ng-click='chatWith(contact.email)'>{{contact.username}}</a>  
+            </div>
+      </div>
       <div class="row">
+          
           <div class='col-md-9'>
             <chat-box></chat-box>
           </div>
@@ -23,7 +21,7 @@
           <div class='col-md-8'>
             <form role='form' novalidate name='form'>
               <div class='form-group'>
-                <input type='text' style='width: 80%'
+                <input type='text'
                 required
                 ng-max='50'
                 ng-model='message'

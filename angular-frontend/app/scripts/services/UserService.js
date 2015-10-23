@@ -7,8 +7,8 @@ chatApp.factory('UserService', function($http) {
     var authBase = 'http://localhost:3000/auth'; 
     var UserService = {};
  
-    UserService.logIn =  function(username, password) {
-      return $http.post(authBase+'/authenticate');
+    UserService.logIn =  function(email, password) {
+      return $http.post(authBase+'/authenticate', {'email': email, 'password':password});
     }; 
 
     UserService.save =  function(user) {

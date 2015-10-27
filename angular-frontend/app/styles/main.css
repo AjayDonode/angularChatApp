@@ -26,13 +26,12 @@ body {
   padding-bottom: 19px;
 }
 
-div#header_brand {
-    background-image: url(/images/yoman.png);
-    height: 50px;
-    margin-top: 26px;
-    position: absolute;
-    width: 40px;
-    z-index: 1;
+div.brand_logo {
+    background-image: url(../images/panyalogo.png);
+    height: 49px;
+    margin-top: 0px;
+    position: inherit;
+    width: 50px;
 }
 
 h1.logo {
@@ -78,7 +77,7 @@ hr {
     max-width: 750px;
     background: #F0F0F0;
     border: 1px solid #CCC;
-    height: 2000px;
+    height: 800px;
     margin: 20px auto;
   }
 }

@@ -13,6 +13,11 @@ angular
   .config(function($stateProvider, $urlRouterProvider) {
     
     $stateProvider
+        .state('/', {
+            url: '/',
+            templateUrl: 'views/search/search.html',
+            controller: 'UserCtrl'
+        })
          .state('chat', {
             url: '/chat',
             templateUrl: 'views/ChatMain.html',
@@ -57,7 +62,7 @@ angular
         });
 
  		
- 		$urlRouterProvider.otherwise('/login');
+ 		$urlRouterProvider.otherwise('/');
     
     })
   .value('nickName', 'anonymous'); //the way to use global variables (constants)

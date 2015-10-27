@@ -274,8 +274,7 @@ module.exports = function (grunt) {
             '*.html',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
-            'fonts/*'
-          ]
+            'fonts/*'         ]
         }, {
           expand: true,
           cwd: '.tmp/images',
@@ -288,6 +287,16 @@ module.exports = function (grunt) {
         cwd: '<%= yeoman.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
+      },
+      glyphicons: {
+        files:[
+          {
+            expand:true,
+            flatten:true,
+            src: '<%= yeoman.app %>/bower_components/bootstrap/dist/fonts/*',
+            dest: '<%= yeoman.dist %>/fonts/'
+          }
+        ]
       }
     },
 

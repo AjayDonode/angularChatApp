@@ -77,7 +77,9 @@ hr {
     max-width: 750px;
     background: #F0F0F0;
     border: 1px solid #CCC;
-    height: 800px;
+    min-height: 100%;
+    height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+    height: 100%;
     margin: 20px auto;
   }
 }

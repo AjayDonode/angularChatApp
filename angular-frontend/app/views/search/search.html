@@ -1,23 +1,46 @@
-<div  ng-controller='UserCtrl'>
-    <div class="brand_login">
-    <br>
-    <h2>Search</h2>
-    <hr/>
- <div class="container-fluid">
-   <form id="signin" class="navbar-form navbar-right" role="form">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="input-group">
-              <input type="text" class="form-control" aria-label="...">
-            </div><!-- /input-group -->
-          </div><!-- /.col-lg-6 -->
-          <div class="col-lg-6">
-            <div class="input-group">
-              <input type="text" class="form-control" aria-label="...">
-            </div><!-- /input-group -->
-          </div><!-- /.col-lg-6 -->
-          <div class="col-lg-2"><button type="submit" class="btn btn-primary">Search</button></div>
-        </div><!-- /.row -->
-   </form>    
-   </div>
-</div>    
+<div class="" ng-controller='UserCtrl'>
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar hidden">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Export</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="">Nav item</a></li>
+            <li><a href="">Nav item again</a></li>
+            <li><a href="">One more nav</a></li>
+            <li><a href="">Another nav item</a></li>
+            <li><a href="">More navigation</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="">Nav item again</a></li>
+            <li><a href="">One more nav</a></li>
+            <li><a href="">Another nav item</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-9 text-center v-center">
+          <h1>{Logo}</h1>
+          <p class="lead">Start search</p>         
+          <br>
+          <form class="col-lg-12">
+              <div class="input-group input-group-lg col-sm-offset-4 col-sm-4">
+                <div class="input-append">
+                 <input type="text" class="center-block form-control input-sm" title="Search" placeholder="Search">
+                <input type="text" class="center-block form-control input-sm" title="Location" placeholder="Location">
+                <span class="input-group-btn">
+                    <a href="#" class="btn btn-info btn-sm">
+                        <span class="glyphicon glyphicon-search"></span>
+                     </a>
+                </span>
+                </div> 
+            </div>
+          </form>
+        </div>
+        
+      </div> <!-- /row -->
+  <br>
+  <br>
+</div>

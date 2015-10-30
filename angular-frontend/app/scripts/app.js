@@ -40,21 +40,15 @@ angular
             templateUrl: 'views/Register/RegisterForm.html',
             controller: 'RegisterCtrl'
         })
-        
-        // nested states 
-        // each of these sections will have their own view
-        // url will be nested (/form/profile)
         .state('form.profile', {
             url: '/profile',
             templateUrl: 'views/Register/Form_Profile.html'
         })
-        
         // url will be /form/interests
         .state('form.interests', {
             url: '/interests',
             templateUrl: 'views/Register/Form_Interest.html'
         })
-        
         // url will be /form/payment
         .state('form.payment', {
             url: '/payment',

@@ -1,32 +1,8 @@
-angular-frontend/.tmp/
+app-ui/.tmp
 node_modules
-angular-frontend/app/bower_components/angular-animate/.bower.json
-angular-frontend/app/bower_components/angular-animate/angular-animate.js
-angular-frontend/app/bower_components/angular-animate/angular-animate.min.js
-angular-frontend/app/bower_components/angular-animate/angular-animate.min.js.map
-angular-frontend/app/bower_components/angular-animate/bower.json
-angular-frontend/app/bower_components/angular-animate/README.md
-angular-frontend/app/bower_components/angular-ui-router/.bower.json
-angular-frontend/app/bower_components/angular-ui-router/bower.json
-angular-frontend/app/bower_components/angular-ui-router/CHANGELOG.md
-angular-frontend/app/bower_components/angular-ui-router/CONTRIBUTING.md
-angular-frontend/app/bower_components/angular-ui-router/LICENSE
-angular-frontend/app/bower_components/angular-ui-router/README.md
-angular-frontend/app/bower_components/angular-ui-router/api/angular-ui-router.d.ts
-angular-frontend/app/bower_components/angular-ui-router/release/angular-ui-router.js
-angular-frontend/app/bower_components/angular-ui-router/release/angular-ui-router.min.js
-angular-frontend/app/bower_components/angular-ui-router/src/common.js
-angular-frontend/app/bower_components/angular-ui-router/src/resolve.js
-angular-frontend/app/bower_components/angular-ui-router/src/state.js
-angular-frontend/app/bower_components/angular-ui-router/src/stateDirectives.js
-angular-frontend/app/bower_components/angular-ui-router/src/stateFilters.js
-angular-frontend/app/bower_components/angular-ui-router/src/templateFactory.js
-angular-frontend/app/bower_components/angular-ui-router/src/urlMatcherFactory.js
-angular-frontend/app/bower_components/angular-ui-router/src/urlRouter.js
-angular-frontend/app/bower_components/angular-ui-router/src/view.js
-angular-frontend/app/bower_components/angular-ui-router/src/viewDirective.js
-angular-frontend/app/bower_components/angular-ui-router/src/viewScroll.js
-public/
+app-ui/app/bower_components
+public
 bower_components/
+app-ui/node_modules
 
 
